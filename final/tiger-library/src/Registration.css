@@ -1,0 +1,124 @@
+.joinus{
+    padding: 2rem;
+
+    text-align: center;
+}
+
+.registration-title, .registration-text{
+    color: #DCD7C9;
+}
+
+.dark .registration-title,
+.dark .registration-text{
+    color: lightslategray;
+}
+
+.form__modal{
+    background-color: lightyellow;
+}
+
+.dark .form__modal{
+    background-color: lightgrey;
+}
+
+.registration-text{
+    text-align: left;
+}
+
+.form__open{
+    border: none;
+    padding: 1rem;
+    border-radius: 2rem;
+    margin-top: 1rem;
+    
+    position: relative;
+
+    background-color: lightgrey;
+
+    font-size: inherit;
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.dark .form__open{
+    background-color: darkgray;
+}
+
+label{
+    padding: 0.5rem;
+}
+
+label.xrequired:before {
+    content: '* ';
+    color: red;
+}
+
+.form__name, .form__email, .form__checkbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form__checkbox, .form__name, .form__email, .form__select{
+    padding: 1rem;
+}
+
+.name-input, .email-input{
+    width: 50vw;
+}
+
+.form__select{
+    padding-bottom: 0;
+}
+
+.checkbox-instructions, .form-select__instructions{
+    padding: 0;
+    
+    font-size: 0.5rem;
+
+    color: #858176;
+}
+
+.form-submit{
+    padding: 0.5rem;
+
+    border: 1px solid darkolivegreen;
+    border-radius: 2rem;
+
+    background-color: lightgrey;
+}
+
+.form__controls{
+    padding: 1rem;
+}
+
+.form__cancel{
+    padding: 0.5rem;
+
+    border: 1px solid darkolivegreen;
+    border-radius: 2rem;
+
+    background-color: lightgrey;
+
+}
+
+.dark .form-submit,
+.dark .form__cancel{
+    background-color: darkgray;
+}
+
+.innerText{
+    padding: 1.5rem;
+    padding-top: 0;
+
+    color: red;
+}
+
+@media screen and (min-width: 44rem) {
+    .form__name, .form__email{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}

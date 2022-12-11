@@ -1,0 +1,461 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 1rem;
+
+    font-family: sans-serif;
+
+    background-color: burlywood;
+}
+
+.skiplink {
+    z-index: 2;
+
+    position: absolute;
+
+    left: 50%;
+    top: 0;
+    
+    transform: translateY(-100%);
+    transition: transform 0.2s;
+  }
+  
+.skiplink:focus {
+    transform: translateY(0%);
+}
+
+
+
+
+/*
+ *
+ *
+ * header
+ *
+ *
+ */
+header{
+    position: relative;
+    z-index: 1;
+    
+    display: flex;
+    flex-direction: column;
+
+    background-color: burlywood;
+
+    margin: 0;
+}
+
+header div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding: 0;
+}
+
+header img{
+    display: block;
+}
+
+header div h1{
+    text-align: center;
+    align-items: center;
+
+    margin: 0;
+
+    width: 100%;
+
+    color: black;
+}
+
+.menu__button{
+    border: none;
+    padding: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    position: relative;
+
+    z-index: 2;
+
+    background-color: inherit;
+
+    cursor: pointer;
+}
+
+/* below CSS adapted from https://css.gg under the MIT License */
+/* https://css.gg/menu */
+.hamburger-menu {
+    transform: scale(var(--ggs,1))
+}
+.hamburger-menu,
+.hamburger-menu::after,
+.hamburger-menu::before {
+    margin-left: auto;
+
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 3px;
+    background: currentColor
+}
+.hamburger-menu::after,
+.hamburger-menu::before {
+    content: "";
+    position: absolute;
+    top: -6px
+}
+.hamburger-menu::after {
+    top: 6px
+}
+
+/*
+ *
+ * menu
+ *
+ */
+.nav{
+    display: block;
+    height: 0;
+}
+
+.nav--open .nav__menu{
+    display: block;
+
+    position: absolute;
+
+    right: 0;
+    top: 2rem;
+
+    z-index: 1;
+
+    padding: 0;
+    margin-top: 2rem;
+        
+    list-style: none;
+
+    background-color: burlywood;
+}
+
+.nav .nav__item{
+    display: none;
+
+    padding: 0.5rem;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.nav--open .nav__item{
+    display: block;
+}
+
+.nav__item a{
+    padding: 0.5rem;  
+}
+
+.nav__item a:hover,
+.nav__item a:focus {
+    background-color: blue;
+    color: white;
+}
+
+
+
+
+/*
+ *
+ *
+ * main
+ *
+ *
+ */
+.main{
+    position: relative;
+
+    background-color: papayawhip;
+}
+
+/*
+ *
+ * cards
+ *
+ */
+.cards{
+    padding: 1rem;
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+}
+
+.card{
+    grid-column: span 12;
+
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+
+    padding: 1rem;
+    padding-top: 0.5rem;
+    border: 1px solid black;
+    border-radius: 2rem;
+
+    background-color: #eee;
+}
+
+.card img{
+    width: 200px;
+}
+
+.card:hover{
+    box-shadow: none;
+}
+
+.card__title{
+    color: black;
+
+    margin: 0.5rem;
+    margin-left: 0;
+
+    padding: 0.5rem;
+    padding-left: 0;
+}
+
+.card__text{
+    color: black;
+    font-size: 1rem;
+}
+
+.card__sub-button{
+    border: none;
+    cursor: pointer;
+
+    font-size: 1rem;
+    color: blue;
+    text-decoration: underline;
+}
+
+/*
+ *
+ * modal
+ *
+ */
+.modal{
+    border: 2px solid black;
+    padding: 0.5rem;
+
+    width: 26rem;
+}
+
+.modal::backdrop {
+    background-color: black;
+    opacity: 0.7;
+}
+
+.modal h2{
+    text-align: center;
+}
+
+.form__item{
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.form__item-name:after,
+.form__item-email:after,
+.form__item-confirm:after {
+    font-style: italic;
+    content: ' * required ';
+    color: black;
+}
+
+input{
+    width: 100%;
+}
+
+.subscribe__name-error,
+.subscribe-email__innertext,
+.subscribe-confirm__innertext{
+    padding: 0rem;
+    padding-bottom: 0.5rem;
+    color: red;
+    font-size: 1rem;
+}
+
+.subscribe-name--invalid .subscribe__name-error{
+    display: block;
+}
+
+.subscribe-email__innertext:empty,
+.subscribe-confirm__innertext:empty{
+    display: none;
+}
+
+.modal__buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal__buttons button{
+    font-size: 1.2rem;
+
+    border: 1px solid black;
+    border-radius: 1rem;
+
+    margin: 0.5rem;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    cursor: pointer;
+}
+
+.form__item--submit{
+    background-color: lime;
+}
+
+.modal__cancel{
+    background-color: lightcoral;
+}
+
+
+
+/*
+ *
+ *
+ * footer
+ *
+ *
+ */
+ footer{ 
+    position: relative;
+   
+    margin: 0;
+    padding: 0.5rem;
+
+    width: 100%;
+    background-color: burlywood;
+
+}
+
+.footer ul{
+    display: flex;
+    flex-direction: column;
+
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+}
+
+.footer__item{    
+    font-size: 1rem;
+}
+
+
+
+
+/*
+ *
+ *
+ * desktop
+ *
+ *
+ */
+ @media screen and (min-width:44rem) {
+
+    /* 
+     *
+     * header 
+     *
+     */
+    header{
+        padding-bottom: 0.5rem;
+    }
+
+    .menu__button{
+        display: none;
+    }
+
+    /* 
+     * menu
+     */
+    .nav{
+        height: 2rem;
+    }
+
+    ul.nav__menu {
+        padding-bottom: 0;
+    }
+
+    .nav .nav__item{
+        display: block;
+    }
+
+    .nav__menu{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+    
+        padding:0;
+        padding-bottom: 0.5rem;
+        margin: 0;
+    
+        justify-items: center;
+        align-items: center;
+    
+        list-style: none;
+    }
+    
+    .nav__item{
+        grid-column: span 4;
+    }
+
+    /* 
+     *
+     * main 
+     *
+     */
+    .card{
+        grid-column: span 4;
+    }
+    
+    .card{
+        grid-column: span 4;
+
+        align-items: center;
+    }
+
+    .card__title{
+        color: black;
+
+        margin: 0.5rem;
+
+        padding: 0.5rem;
+    }
+
+
+    /* 
+     *
+     * footer 
+     *
+     */
+    .footer{
+        padding: 2rem;
+    }
+
+    .footer ul{
+        flex-direction: row;
+        justify-content:space-between;
+    }
+
+}

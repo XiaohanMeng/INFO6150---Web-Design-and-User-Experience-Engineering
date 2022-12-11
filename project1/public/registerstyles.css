@@ -1,0 +1,458 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+html, body{
+    position: absolute;
+
+    height: 100%;
+    width: 100%;
+    margin: 0;
+
+    font-family: sans-serif;
+}
+
+/*
+ *
+ *
+ * header
+ *
+ *
+ */
+
+header{
+    position: fixed;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+
+    background-color: #DCD7C9;
+
+    margin: 0;
+
+    z-index: 1;
+}
+
+header div{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding: 2rem;
+}
+
+header div a{
+    width: 50vw;
+}
+
+header div a img{
+    aspect-ratio: 1/1;
+    width: 5rem;
+}
+
+
+header div h1{
+    justify-content: center;
+    text-align: center;
+
+    margin: 0;
+
+    width: 100%;
+
+    font-size: 2rem;
+
+    color: #472D2D;
+}
+
+/* below CSS adapted from https://css.gg under the MIT License */
+/* https://css.gg/home-alt */
+.gg-home-alt {
+    margin-left: auto;
+
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,2));
+    width: 18px;
+    height: 14px;
+    border: 2px solid;
+    border-top: 0;
+    border-radius: 2px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    margin-bottom: -2px;
+}
+.gg-home-alt::after,
+.gg-home-alt::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute
+}
+.gg-home-alt::before {
+    border-top: 2px solid;
+    border-left: 2px solid;
+    border-top-left-radius: 4px;
+    transform: rotate(45deg);
+    top: -5px;
+    border-radius: 3px;
+    width: 14px;
+    height: 14px;
+    left: 0
+}
+.gg-home-alt::after {
+    width: 6px;
+    height: 10px;
+    background: currentColor;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    left: 4px;
+    bottom: -2px
+}
+
+.gg-home-alt span {
+    position: relative;
+
+    display: none;
+
+    font-size: 0.7rem;
+
+    width: 4rem;
+
+    opacity: 20%;
+ 
+    left: -300%;
+    top: 1rem;
+ 
+    color: #fff;
+ 
+    text-align: center;
+ 
+    background-color: rgba(1,1,1,0.7);
+ 
+}
+
+.gg-home-alt:hover span {
+    display: block;
+ 
+}
+
+.localnav{
+    padding: 0.5rem;
+}
+
+.localnav__menu{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 1rem;
+
+    padding: 0;
+    margin: 0;
+
+    justify-items: center;
+    align-items: center;
+
+    list-style: none;
+}
+
+.localnav__item{
+    grid-column: span 12;
+}
+
+.localnav__item button{
+    border: none;
+    padding: 0;
+
+    position: relative;
+
+    background-color: inherit;
+    color: #7D5A50;
+
+    font-size: inherit;
+    text-decoration: none;
+
+    cursor: pointer;
+
+}
+
+.localnav__menu ul{
+    position: absolute;
+    left: -100%;
+
+    padding: 0;
+    margin: 0;
+
+    background-color: #d4cdbc;
+
+    overflow: hidden;
+    list-style: none;
+
+    transition: left 1s;
+} 
+
+
+.localnav__menu ul li{
+    padding: 0.2rem 1rem;
+    opacity: 0;
+
+    transition: opacity .5s;
+}
+
+.localnav__menu li:hover ul,
+.localnav__menu li:focus-within ul{
+    left: 0;
+}
+
+.localnav__menu li:hover ul li,
+.localnav__menu li:focus-within ul li{
+    opacity: 1;
+}
+
+.localnav__item li a{
+    color: #7D5A50;
+}
+
+.localnav__item li a:hover{
+    color: #B4846C;
+} 
+
+
+
+/*
+ *
+ *
+ * main
+ *
+ *
+ */
+.main{
+    background-color: #343636;
+
+    position: relative;
+
+    padding-top: 19rem;
+    padding-bottom: 2rem;   
+    
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.main h2{
+    grid-column: span 12;
+
+    color: #DCD7C9;
+    
+    text-align: center;
+    
+    margin-bottom: 0.5rem;
+    
+    width: 100%;
+    
+    background-color: #4E5857;
+    
+    border-radius: 2rem;
+
+}
+
+.main .body{
+    grid-column: span 12;
+    
+    margin-bottom: 0.5rem;
+    
+    width: 100%;
+    
+    background-color: #4E5857;
+    
+    border-radius: 2rem;
+
+
+}
+
+.main .column{
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-around;
+}
+
+
+div div{
+    padding: 0.5rem;
+}
+
+.main .body .column div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+label.xrequired:before {
+    content: '* ';
+    color: red;
+}
+
+label{
+    padding: 0.5rem;
+
+    color: #DCD7C9;
+}
+
+input{
+    width: 50vw;
+}
+
+.checkbox{
+    width: 3em;
+}
+
+
+.column p{
+    color: #DCD7C9;
+
+    padding: 0.5rem;
+}
+.column form p{
+    padding: 0;
+}
+
+.instructions{
+    padding: 0;
+    
+    font-size: 0.5rem;
+}
+
+main button{
+    display : block;
+    margin : 0 auto;
+    margin-top: 1rem;
+
+    cursor: pointer;
+}
+
+
+
+/*
+ *
+ *
+ * footer
+ *
+ *
+ */
+ footer{    
+    position: relative;
+    
+    margin: 0;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    padding-bottom: 1.5rem;
+
+    width: 100%;
+    background-color: #DCD7C9;
+
+}
+
+footer ul{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 2vw;
+
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+
+    justify-items: center;
+    align-items: center;
+}
+
+footer p{
+    grid-column: span 12;
+
+    text-align: center;
+
+    color: #7D5A50;;
+}
+
+footer li{
+    grid-column: span 12;
+
+    font-size: 0.7rem;
+
+}
+
+.footer a{
+    color:#7D6E83;
+    
+    text-decoration: none;
+}
+.footer a:hover{
+    color: #B4846C;
+}
+
+/*
+ *
+ *
+ * desktop
+ *
+ *
+ */
+@media screen and (min-width: 40rem) {
+
+    header div h1{
+        font-size: 3rem;
+    }
+
+    header div a img{
+        width: 50%;
+    }
+
+    .gg-home-alt {
+        transform: scale(var(--ggs,2.5));
+    }
+
+    .localnav__item{
+        grid-column: span 4;
+    }
+
+    .localnav__menu ul{
+        position: absolute;
+        left: initial;
+    
+        padding: 0;
+        margin: 0;
+    
+    
+        background-color: #d4cdbc;
+            
+        overflow: hidden;
+        list-style: none;
+    
+        transform: rotateX(90deg);
+        transform-origin: top;
+    
+        transition: transform 1s,;
+    
+    }
+
+    .localnav__menu li:hover ul,
+    .localnav__menu li:focus-within ul{
+        left: initial;
+        transform: rotateX(0deg);
+    }
+
+    .main{
+        padding-top: 17rem;
+    }
+
+    .main .body .column div{
+        flex-direction: row;
+    }
+
+
+    footer li{
+        grid-column: span 4;
+    }
+}

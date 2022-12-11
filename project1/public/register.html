@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registerstyles.css">
+    <title>Registration</title>
+</head>
+<body>
+    <header class="header">
+        <div>
+            <a href="index.html"><img src="images/ralph-mayhew-EiGBmms-alk-unsplash.jpeg" alt=""></a>
+            <h1>Registration</h1>
+            <a href="index.html"><i class="gg-home-alt" alt=""><span>Go to Homepage</span></i></a>
+        </div>
+        <nav class="localnav">
+            <ul class="localnav__menu">
+                <li class="localnav__item">
+                    <button type="button">Home</button>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Homepage animal</a></li>
+                    </ul>
+                </li>
+                <li class="localnav__item">
+                    <button type="button">About</button>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#">About tiger types</a></li>
+                        <li><a href="#">About Habitat</a></li>
+                        <li><a href="#">About Current Situation </a></li>
+                    </ul>
+                    
+                </li>
+                <li class="localnav__item">
+                    <button type="button">Registration</button>
+                    <ul>
+                        <li><a href="register.html">Registration</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">terms & conditions</a></li>
+                        <li><a href="#">Sign in</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <h2>Create a new account</h2>
+        <div class="body">
+            <div class="column">
+                <form action="/register" method="POST">
+                    <p>All fields marked with * are required.</p>
+                    <p>Let's verify some information about you to help set up your account.</p>
+                    <div>
+                        <label class="xrequired" for="name">Name: </label>
+                        <input id="name" name="name" type="name" required title="letters" placeholder="Required: type here"/>
+                    </div>
+                    
+                    <div>
+                        <label class="xrequired" for="email">Email: </label>
+                        <input id="email" name="email" type="email"  required title="email format with @" placeholder="Required: type here"/>
+                    </div>
+            
+                    <div>
+                        <label>
+                            <span>Receive notifications (optional)</span>
+                            <input class="checkbox" name="notifications" type="checkbox" checked/>
+                            <p class="instructions">When you accept this, we may send notifications from time to time.</p>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <span>Select your email language preference (optional)</span>
+                            <select name="language">
+                                <option value="" selected>Please select</option>
+                                <option value="1">English</option>
+                                <option value="2">Español</option>
+                                <option value="3">Français</option>
+                            </select>
+                            <p class="instructions">This website allows you to receive your email communication in English, Spanish or French.</p>
+                        </label>
+                    </div>
+
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+            <div class="column">
+                <p>Present belly, scratch hand when stroked get scared by sudden appearance of cucumber and purr when being pet attack feet, so attack the dog then pretend like nothing happened so oooo! dangly balls! jump swat swing flies so sweetly to the floor crash move on wash belly nap am in trouble, roll over, too cute for human to get mad. </p>
+                <p>Purr like a car engine oh yes, there is my human slave woman she does best pats ever that all i like about her hiss meow meow meow, i tell my human or get scared by sudden appearance of cucumber yet mew so nyaa nyaa so fight own tail, loved it, hated it, loved it, hated it. </p>
+            </div>
+        </div>
+
+    </main>
+    <footer class="footer">
+        <ul><p>Please read our <a href="#">Privacy Policy</a></p>
+            <li class="footer"><a href="#">Contact Us</a></li>
+            <li class="footer"><a href="#">Questions</a></li>
+            <li class="footer"><a href="#">Help</a></li>
+        </ul>
+    </footer>
+    
+</body>
+</html>

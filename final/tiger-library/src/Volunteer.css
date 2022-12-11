@@ -1,0 +1,47 @@
+.volunteers{
+    padding: 1rem;
+}
+
+
+.volunteers__intro{
+    color: #DCD7C9;
+}
+
+.dark .volunteers__intro,
+.dark .volunteer__item{
+    color: lightslategray;
+}
+
+.volunteer__item{
+    display: flex;
+    flex-direction: column;
+
+    padding: 0.5rem;
+
+    text-align: center;
+    align-items: center;
+
+    color: #DCD7C9;
+
+    padding-bottom: 3rem;
+
+}
+
+.volunteer__pic{
+    width: 70vw;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+    object-fit: cover;
+
+}
+
+
+
+@media screen and (min-width: 44rem) {
+
+    .volunteer__pic{
+        width: 50vw;
+    
+    }
+}

@@ -1,0 +1,44 @@
+.app {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+
+  padding: 1rem;
+}
+
+.inventory-count{
+  text-align: center;
+  width: 1.5rem;
+}
+
+button{
+  display: block;
+
+  justify-content:center;
+
+  margin-top: auto;
+  margin-bottom: auto;
+
+  width: 2rem;
+
+  height: 2rem;
+  padding: 0.5rem;
+}
+
+.reorder-button{
+  grid-column: span 2;
+  width: fit-content;
+
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+   }
+}

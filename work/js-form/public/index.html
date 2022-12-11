@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="site.js"></script>
+    <title>Homepage</title>
+</head>
+<body>
+    <header class="header">
+        <div>
+            <a href="index.html"><img src="http://placekitten.com/75/75" alt="Cat Logo, lovely kitten"></a>
+            <h1>Cats on the Internet</h1>
+        </div>
+        <nav class="nav">
+            <ul class="nav__menu">
+                <li class="nav__item">
+                    <button type="button" class="menu__button">Home</button>
+                    <ul class="menu__item">
+                        <li><a href="index.html">Back to homepage</a></li>
+                        <li><a href="/about.html">About Us</a></li>
+                    </ul>
+                </li>
+                <li class="nav__item">
+                    <button type="button" class="menu__button">About</button>
+                    <ul class="menu__item">
+                        <li><a href="/types.html">About cats types</a></li>
+                        <li><a href="/habitat.html">About Habitat</a></li>
+                        <li><a href="/situation.html">About Current Situation</a></li>
+                    </ul>
+                </li>
+                <li class="nav__item">
+                    <button type="button" class="menu__button">Registration</button>
+                    <ul class="menu__item">
+                        <li><a href="/policy.html">privacy policy</a></li>
+                        <li><a href="/terms.html">terms & conditions</a></li>
+                        <li><a href="/sign_in.html">Sign in</a></li>
+                        <li><a href="/sign_up.html">Create an account</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main class="main">
+        <h2>Create a new account</h2>
+        <div class="body">
+            <form action="/register" class="register" method="POST">
+                <p>All fields marked with * are required.</p>
+                <p>Let's verify some information about you to help set up your account.</p>
+                <div class="form__item register__name register-name">
+                    <label class="form__item-name" for="name">Name: </label>
+                    <span class="register__name-error">Please fill out this field.</span>
+                    <input id="name" class="register-name__input" name="name" type="text" title="letters" placeholder="Required: type here">
+                </div>
+                
+                <div class="form__item register__email register-email">
+                    <label class="form__item-email" for="email">Email: </label>
+                    <div class="register-email__innertext"></div>
+                    <input id="email" class="register-email__input" name="email" type="text" title="email format with @" placeholder="Required: type here">
+                </div>
+
+                <div class="form__item register__confirm register-confirm">
+                    <label class="form__item-confirm" for="confirm-email">Confirm Email: </label>
+                    <div class="register-confirm__innertext"></div>
+                    <input id="confirm-email" class="register-confirm__input" name="confirm-email" type="text" title="email format with @" placeholder="Required: type here">
+                </div>
+        
+                <div class="form__item">
+                    <label>
+                        <span>Receive spam emails (optional)</span>
+                        <input class="checkbox" name="wants-spam" type="checkbox" checked/>
+                        <p class="instructions">When you accept this, we may send notifications from time to time.</p>
+                    </label>
+                </div>
+
+                <div class="form__item">
+                    <label>
+                        <span>Select your email tier (optional)</span>
+                        <select name="tier">
+                            <option value="" selected>Please select</option>
+                            <option value="1">Bronze</option>
+                            <option value="2">Silver</option>
+                            <option value="3">Gold</option>
+                        </select>
+                        <p class="instructions">This website allows you to receive your email with different tier.</p>
+                    </label>
+                </div>
+                <button type="submit" class="form__item--submit">Register</button>
+            </form>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <ul><p>Please read our <a href="#">Privacy Policy</a></p>
+            <li class="footer"><a href="#">Contact Us</a></li>
+            <li class="footer"><a href="#">Questions</a></li>
+            <li class="footer"><a href="#">Help</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,206 @@
+.gallery {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+
+    width: 80vw;
+    height: 40rem;
+    max-width: 800px;
+
+    margin: 0 auto;
+    margin-top: 4rem;
+
+    text-align: center;
+    
+}
+
+.gallery-title{
+    color: antiquewhite;
+
+    text-align: center;
+}
+
+.dark .gallery-title,
+.dark .tiger-text{
+    color: darkslategrey;
+}
+
+.tigerslide {
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: auto;
+    opacity: 0;
+}
+
+.tigerslide.activeSlide {
+    opacity: 1;
+}
+
+.tiger-img {
+    margin-bottom: 1rem;
+    aspect-ratio: 1/1;
+    height: 20rem;
+    /* width: 150px;
+    height: 150px; */
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.tiger-text {
+    margin: 0 auto;
+    line-height: 2;
+    color: white;
+
+    font-size: 0.9rem;
+}
+
+.tiger-arrow__prev,
+.tiger-arrow__next {
+    display: grid;
+    place-items: center;
+    position: absolute;
+
+    top: 200px;
+
+    background: #617d98;
+    color: #fff;
+
+    width: 2rem;
+    height: 2rem;
+
+    border-color: transparent;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+
+    padding: 0;
+
+}
+
+.tiger-arrow__prev:hover,
+.tiger-arrow__next:hover {
+    background: #ba5d2b;
+}
+
+.tiger-arrow__prev {
+    left: 0;
+}
+
+.tiger-arrow__next {
+    right: 0;
+}
+
+
+/* below CSS adapted from https://css.gg under the MIT License */
+/* https://css.gg/arrow-right */
+/* https://css.gg/arrow-left */
+.gg-arrow-right {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 22px;
+    height: 22px;
+    color: whitesmoke;
+}
+   
+.gg-arrow-right::after,
+.gg-arrow-right::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    right: 3px
+}
+   
+.gg-arrow-right::after {
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid;
+    border-right: 2px solid;
+    transform: rotate(45deg);
+    bottom: 7px
+}
+   
+.gg-arrow-right::before {
+    width: 16px;
+    height: 2px;
+    bottom: 10px;
+    background: currentColor
+} 
+
+.gg-arrow-left {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 22px;
+    height: 22px;
+
+    color: whitesmoke;
+}
+   
+.gg-arrow-left::after,
+.gg-arrow-left::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    left: 3px;
+}
+   
+.gg-arrow-left::after {
+    width: 8px;
+    height: 8px;
+    border-bottom: 2px solid;
+    border-left: 2px solid;
+    transform: rotate(45deg);
+    bottom: 7px
+}
+   
+.gg-arrow-left::before {
+    width: 16px;
+    height: 2px;
+    bottom: 10px;
+    background: currentColor
+} 
+
+
+@media (prefers-reduced-motion: no-preference) {
+    .tigerslide {
+        transition: all 0.3s linear;
+    }
+    .tigerslide.activeSlide {
+        transform: translateX(0);
+      }
+      
+    .tigerslide.lastSlide {
+        transform: translateX(-100%);
+    }
+      
+    .tigerslide.nextSlide {
+        transform: translateX(100%);
+    }
+    
+    .tiger-arrow__prev,
+    .tiger-arrow__next {
+        transform: translateY(-50%);
+        transition: all 0.3s linear;
+    }
+}
+
+@media screen and (min-width: 29rem) {
+    .gallery {
+        height: 32rem;
+    }
+}
+
+@media screen and (min-width: 44rem) {
+    .gallery {
+        height: 29rem;
+    }
+}

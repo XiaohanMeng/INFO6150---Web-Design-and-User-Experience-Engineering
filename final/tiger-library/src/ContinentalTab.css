@@ -1,0 +1,26 @@
+.continental-tab{
+    display: flex;
+    flex-direction: column;
+
+    padding: 1rem;
+
+}
+
+.continental-img{
+    width: 15rem;
+
+    align-self: center;
+}
+
+.continental-text{
+
+    padding: 1rem;
+}
+
+
+@media screen and (min-width: 44rem) {
+    .continental-tab{
+        padding: 1.5rem;
+        flex-direction: row;
+    }
+}

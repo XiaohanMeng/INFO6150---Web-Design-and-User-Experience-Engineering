@@ -1,0 +1,24 @@
+All images are from unsplash.com
+
+index.html:
+logo: ralph-mayhew-EiGBmms-alk-unsplash.jpeg: https://unsplash.com/photos/EiGBmms-alk
+cards:
+card one background: niket-goswami--BnqqHaeFq4-unsplash.jpeg: https://unsplash.com/photos/-BnqqHaeFq4
+card two: efe-yagiz-soysal-PUrHke-Hlf8-unsplash.jpeg: https://unsplash.com/photos/PUrHke-Hlf8
+card three background: ratanjot-singh-UIhc7sohnvc-unsplash.jpeg: https://unsplash.com/photos/UIhc7sohnvc
+card four background: kar-ming-moo-Q_3WmguWgYg-unsplash.jpeg: https://unsplash.com/photos/Q_3WmguWgYg
+
+
+about.html:
+waldemar-brandt-nxR7gvSokH8-unsplash.jpeg: https://unsplash.com/photos/nxR7gvSokH8
+mohamed-elsayed-x4HinQz68Z4-unsplash.jpeg: https://unsplash.com/photos/x4HinQz68Z4
+peter-van-der-vaart-DhajKTKoMzw-unsplash.jpeg: https://unsplash.com/photos/DhajKTKoMzw
+
+
+
+
+
+
+
+
+

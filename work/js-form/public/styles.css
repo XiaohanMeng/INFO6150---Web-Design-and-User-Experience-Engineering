@@ -1,0 +1,344 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+
+    font-family: sans-serif;
+}
+
+/*
+ *
+ *
+ * header
+ *
+ *
+ */
+header{
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+
+    background-color: #DCD7C9;
+
+    margin: 0;
+}
+
+header div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding: 2rem;
+}
+
+header div a{
+    width: 10%;
+}
+
+header div img{
+    aspect-ratio: 1/1;
+    width: 100%;
+}
+
+header div h1{
+    text-align: center;
+
+    margin: 0;
+
+    width: 100%;
+
+    font-size: 3rem;
+
+    color: #472D2D;
+}
+
+/*
+ *
+ * menu
+ *
+ */
+.nav{
+    padding: 0.5rem;
+}
+
+.nav__menu{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 1rem;
+
+    padding: 0;
+    margin: 0;
+
+    justify-items: center;
+    align-items: center;
+
+    list-style: none;
+}
+
+.nav__item{
+    grid-column: span 12;
+}
+
+.menu__button{
+    border: none;
+    padding: 0;
+    padding-bottom: 0.5rem;
+
+    position: relative;
+
+    background-color: inherit;
+    color: #7D5A50;
+
+    font-size: inherit;
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.menu__item{
+    display: none;
+
+    position: absolute;
+    left: initial;
+
+    z-index: 1;
+
+    padding: 0;
+    margin: 0;
+
+    background-color: #d4cdbc;
+        
+    list-style: none;
+}
+
+.menu__item li{
+    padding: 0.2rem 1rem;
+}
+
+.menu__item--open{
+    display: block;
+}
+
+.menu__item li a{
+    color: #7D5A50;
+}
+
+.menu__item li a:hover{
+    color: #B4846C;
+} 
+
+
+/*
+ *
+ *
+ * main
+ *
+ *
+ */
+ .main{
+    background-color: #343636;
+
+    padding-top: 1rem;
+    padding-bottom: 2rem;   
+    
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.main h2{
+    grid-column: span 12;
+
+    color: #DCD7C9;
+    
+    text-align: center;
+    
+    margin-bottom: 0.5rem;
+    
+    width: 100%;
+    
+    background-color: #4E5857;
+    
+    border-radius: 2rem;
+
+}
+
+.main .body{
+    grid-column: span 12;
+    
+    margin-bottom: 0.5rem;
+    
+    width: 100%;
+    
+    background-color: #4E5857;
+    
+    border-radius: 2rem;
+}
+
+.form__item{
+    padding: 0.5rem;
+    padding-left: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form__item-name:before,
+.form__item-email:before,
+.form__item-confirm:before {
+    content: '* ';
+    color: red;
+}
+
+.main label{
+    padding: 0.5rem;
+
+    color: #DCD7C9;
+}
+
+input{
+    width: 50vw;
+}
+
+.register__name-error,
+.register-email__innertext,
+.register-confirm__innertext{
+    padding: 0rem;
+    padding-bottom: 0.5rem;
+    color: red;
+    font-size: 0.85rem;
+}
+
+.register__name-error{
+    display: none;
+}
+
+.register-name--invalid .register__name-error{
+    display: block;
+}
+
+.register-email__innertext:empty,
+.register-confirm__innertext:empty{
+    display: none;
+}
+
+.checkbox{
+    width: 3em;
+}
+
+.main p{
+    color: #DCD7C9;
+
+    padding: 0.5rem;
+    padding-left: 2rem;
+}
+
+.form__item .instructions{
+    padding: 0;
+    padding-left: 1rem;
+    
+    font-size: 0.5rem;
+}
+
+form button{
+    display : block;
+    margin : 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    
+
+    cursor: pointer;
+}
+
+
+/*
+ *
+ *
+ * footer
+ *
+ *
+ */
+ footer{    
+    margin: 0;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    padding-bottom: 1.5rem;
+
+    width: 100%;
+    background-color: #DCD7C9;
+
+}
+
+footer ul{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 2vw;
+
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+
+    justify-items: center;
+    align-items: center;
+}
+
+footer p{
+    grid-column: span 12;
+
+    text-align: center;
+
+    color: #7D5A50;;
+}
+
+footer li{
+    grid-column: span 12;
+
+    font-size: 0.7rem;
+}
+
+.footer a{
+    color:#7D6E83;
+    
+    text-decoration: none;
+}
+
+.footer a:hover{
+    color: #B4846C;
+}
+
+
+
+/*
+ *
+ *
+ * desktop
+ *
+ *
+ */
+@media screen and (min-width:40rem) {
+    .nav__item{
+        grid-column: span 4;
+    }
+
+    .register__name-error,
+    .register-email__innertext,
+    .register-confirm__innertext{
+        padding-bottom: 0;
+    }
+    
+    .form__item{
+        flex-direction: row;
+    }
+
+    footer li{
+        grid-column: span 4;
+    
+        font-size: 0.7rem;
+    }
+}

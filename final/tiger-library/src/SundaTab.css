@@ -1,0 +1,30 @@
+.sunda-tab{
+    display: flex;
+    flex-direction: column;
+
+    padding: 1rem;
+
+}
+
+.sunda-img{
+    width: 15rem;
+
+    align-self: center;
+
+    margin-right: 1rem;
+}
+
+.sunda-text{
+    padding: 1rem;
+}
+
+
+
+@media screen and (min-width: 44rem) {
+    .sunda-tab{
+        flex-direction: row;
+    
+        padding: 1.5rem;
+    
+    }
+}

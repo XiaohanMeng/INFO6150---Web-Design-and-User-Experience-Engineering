@@ -1,0 +1,193 @@
+.header{
+    display: grid;
+    grid-template-areas: 
+    "header-pic header-title theme-switcher"
+    "header-pic header-subtitle header-subtitle"
+    "header-menu header-subtitle header-subtitle"
+    "header-nav header-nav header-nav";
+
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+
+    background-color: var(--header-bg);
+
+    width: 100%;
+}
+
+.header__menu{
+    grid-area: header-menu;
+}
+
+.header-nav{
+    grid-area: header-nav;
+}
+
+.header__theme-switcher{
+    grid-area: theme-switcher;
+    
+}
+
+.header__title{
+    grid-area: header-title;
+
+    text-align: center;
+
+}
+
+.header__subtitle{
+    grid-area: header-subtitle;
+
+    text-align: center;
+}
+
+.header__pic{
+    grid-area: header-pic;
+
+    margin: auto;
+    padding: 0.5rem;
+
+    width: 6rem;
+    aspect-ratio: 1/1;
+}
+
+.header__menu{
+    border: none;
+    padding: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    position: relative;
+
+    align-items: center;
+
+    z-index: 2;
+
+    background-color: inherit;
+
+    cursor: pointer;
+}
+
+/* below CSS adapted from https://css.gg under the MIT License */
+/* https://css.gg/menu */
+.hamburger-menu {
+    transform: scale(var(--ggs,1))
+}
+.hamburger-menu,
+.hamburger-menu::after,
+.hamburger-menu::before {
+    margin: auto;
+
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 3px;
+    background: currentColor
+}
+.hamburger-menu::after,
+.hamburger-menu::before {
+    content: "";
+    position: absolute;
+    top: -6px
+}
+.hamburger-menu::after {
+    top: 6px
+}
+
+
+.header-nav{
+    display: block;
+    height: 0;
+}
+
+.header-nav__list{
+    display: block;
+
+    position: relative;
+
+    left: 0;
+    top: 0;
+    width: 5rem;
+
+    z-index: 5;
+
+    padding: 0;
+    margin: 0;
+        
+    list-style: none;
+
+    background-color: var(--header-bg);
+    
+}
+
+.header-nav__item{
+    display: none;
+
+    padding: 0.5rem;
+    padding-left: 0;
+    padding-right: 0;
+
+    text-decoration: none;
+}
+
+.header-nav__item{
+    display: block;
+
+    font-size: 0.9rem;
+}
+
+.header-nav__link{
+    text-decoration: none;
+
+    color:#7D6E83;
+
+    padding: 0.5rem;  
+}
+
+.header-nav__link:hover,
+.header-nav__link:focus {
+    background-color: lightslategray;
+    color: white;
+}
+
+.menu-true{
+    display: block;
+}
+
+.menu-false{
+    display: none;
+}
+
+
+
+
+
+@media screen and (min-width: 44rem) {
+    .header__menu{
+        display: none;
+    }
+
+    .header-nav{
+        display: block;
+    }
+
+    .header-nav__list{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+    
+        padding:0;
+        margin: 0;
+
+        width: 100%;
+    
+        justify-items: center;
+        align-items: center;
+    
+        list-style: none;
+    }
+    
+    .header-nav__item{
+        grid-column: span 4;
+    }
+
+}

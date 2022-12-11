@@ -1,0 +1,95 @@
+html, body div{
+    font-family: "Times New Roman", sans-serif;
+    margin: 0;
+}
+
+div{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "local-menu main"
+    "footer footer";
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr auto;
+}
+
+.menu {
+    list-style: none; 
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+.menu a:hover{
+    background-color: rebeccapurple;
+    /* padding: 20px; */
+    color: white;
+}
+
+.menu:hover a{
+    padding: 20px;
+}
+
+
+header{
+    grid-area: header;
+    background-color: plum;
+    display: flex;
+    flex-direction: column;
+}
+
+ul{
+    list-style: none; 
+    padding-left: 10px;
+}
+
+.local-menu{
+    width: 20vw;
+    background-color: pink;
+    border-right: 1px solid black;
+    grid-area: local-menu;
+}
+
+.local-menu ul li a:hover{
+    background-color: plum;
+    
+}
+
+
+.local-menu ul{
+    list-style: none;
+    margin-block: 20px;
+    padding-left: 15px;
+}
+
+.local-menu ul li{
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin: 5px;
+    margin-right: 0;
+}
+
+
+.local-menu ul li a{
+    display: block;
+    /* height: 20px; */
+    padding: 5px;
+}
+
+main{
+    padding-left: 15px;
+    background-color: pink;
+    grid-area: main;
+}
+
+footer{
+    padding: 15px;
+    grid-area: footer;
+    background-color: plum;
+}
+
+
+

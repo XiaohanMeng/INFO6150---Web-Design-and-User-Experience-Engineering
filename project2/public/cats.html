@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="catsstyles.css">
+    <script defer src="site.js"></script>
+    <title>Cats</title>
+</head>
+<body>
+    <a class="skiplink" href="#main">skip to content</a>
+    <header class="header">
+        <div>
+            <a href="index.html"><img src="http://placekitten.com/100/100?image=1" alt=""></a>
+            <h1>Cats Power the Internet</h1>
+            <button aria-label="open/close the navigation menu bar" type="button" class="menu__button"><i class="hamburger-menu" alt=""></i></button>
+        </div>
+        <nav class="nav">
+            <ul class="nav__menu">
+                <li class="nav__item">
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="cats.html">Famous Cats</a>
+                </li>
+                <li class="nav__item">
+                    <a href="event.html">Cat Events</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main" id="main">
+        <div class="cards">
+            <div class="card">
+                <h2 class="card__title">Jorts</h2>
+                <img class="card__pic" src="http://placekitten.com/200/200?image=3" alt="A kitten is playing in the snow.">
+                <div class="card__text">
+                    <p >Dolor nulla repellendus quisquam optio in. In optio distinctio doloremque</p>
+                    <p>Ipsum lorem sit<button class="card__sub-button">Subscribe</button>voluptate inventore.</p>
+                </div>
+            </div>
+            <div class="card">
+                <h2 class="card__title">Jean</h2>
+                <img class="card__pic" src="http://placekitten.com/200/200?image=4" alt="A white kitten leaning against the door is watching you.">
+                <div class="card__text">
+                    <p >Dolor nulla repellendus quisquam optio in. In optio distinctio doloremque</p>
+                    <p>Ipsum lorem sit<button class="card__sub-button">Subscribe</button>voluptate inventore.</p>
+                </div>
+            </div>
+            <div class="card">
+                <h2 class="card__title">Maru</h2>
+                <img class="card__pic" src="http://placekitten.com/200/200?image=5" alt="A kitten lies on the palm of your hand.">
+                <div class="card__text">
+                    <p >Dolor nulla repellendus quisquam optio in. In optio distinctio doloremque</p>
+                    <p >Dolor nulla repellendus quisquam optio in. In optio distinctio doloremque</p>
+                    <p>Ipsum lorem sit<button class="card__sub-button">Subscribe</button>voluptate inventore.</p>
+                </div>
+            </div>
+            <div class="card">
+                <h2 class="card__title">Nyancat</h2>
+                <img class="card__pic" src="http://placekitten.com/200/200?image=6" alt="The kitten is trying to get down the steps.">
+                <div class="card__text">
+                    <p >Dolor nulla repellendus quisquam optio in. In optio distinctio doloremque</p>
+                    <p>Ipsum lorem sit<button class="card__sub-button">Subscribe</button>voluptate inventore.</p>
+                </div>
+            </div>
+            <div class="card">
+                <h2 class="card__title">Grumpy Cat</h2>
+                <img class="card__pic" src="http://placekitten.com/200/200?image=7" alt="A blue-eyed kitten is staring into space.">
+                <div class="card__text">
+                    <p >Dolor nulla repellendus quisquam optio in. In optio distinctio doloremque</p>
+                    <p>Ipsum lorem sit<button class="card__sub-button">Subscribe</button>voluptate inventore.</p>
+                </div>
+            </div>
+            <div class="card">
+                <h2 class="card__title">Lil Bub</h2>
+                <img class="card__pic" src="http://placekitten.com/200/200?image=8" alt="A lil bub kitten lying on the sofa with a red ball.">
+                <div class="card__text">
+                    <p >Dolor nulla repellendus quisquam optio in. In optio distinctio doloremque</p>
+                    <p>Ipsum lorem sit<button class="card__sub-button">Subscribe</button>voluptate inventore.</p>
+                </div>
+            </div>
+            
+        </div>
+        <dialog class="modal">
+            <h2>Subscribe to the Latest Mews!</h2>
+                <form action="/subscribe" class="subscribe" method="POST">
+                    <div class="form__item subscribe__email subscribe-email">
+                        <label class="form__item-email" for="email">Email: </label>
+                        <input id="email" class="subscribe-email__input" name="email" type="text" title="email format with @" placeholder="Required: type here">
+                        <div class="subscribe-email__innertext"></div>
+                    </div>
+    
+                    <div class="form__item subscribe__confirm subscribe-confirm">
+                        <label class="form__item-confirm" for="confirm-email">Confirm Email: </label>
+                        <input id="confirm-email" class="subscribe-confirm__input" name="confirm-email" type="text" title="email format with @" placeholder="Required: type here">
+                        <div class="subscribe-confirm__innertext"></div>
+                    </div>
+                    <div class="modal__buttons">
+                        <button type="submit" class="form__item--submit">Subscribe</button>
+                        <button type="button" class="modal__cancel">Cancel</button>
+                    </div>
+                </form>
+        </dialog>
+    </main>
+
+    <footer class="footer">
+        <ul>
+            <li class="footer__item"><a href="/privacy.html">Privacy Policy</a></li>
+            <li class="footer__item"><a href="/workforus.html">Work for Us</a></li>
+            <li class="footer__item"><a href="/contactus.html">Contact Us</a></li>
+            <li class="footer__item"><a href="/socialmedia.html">Social Media</a></li>
+        </ul>
+    </footer>
+
+    
+</body>
+</html>

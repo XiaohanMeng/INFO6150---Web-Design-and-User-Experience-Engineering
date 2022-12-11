@@ -1,0 +1,138 @@
+.description{
+    grid-column: span 12;
+}
+
+.description__title{    
+    color: #DCD7C9;
+    text-align: center;
+
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+
+    width: 100%;
+
+    background-color: #343636;
+
+    border-radius: 2rem;
+    
+    font-size: 1.7rem;
+}
+
+.description__text{
+    padding: 1rem;
+
+    font-size: 1.2rem;
+
+    color: #DCD7C9;
+}
+
+.app.dark .description__text{
+    color: lightslategray;
+}
+
+/*
+ *
+ * cards
+ *
+ */
+.cards{
+    grid-column: span 12;
+    
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+}
+
+.card{
+    grid-column: span 12;
+    
+    margin: 1rem;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 2px 2px 2px 2px gray;
+
+    padding: 1rem;
+
+}
+
+.card:hover{
+    box-shadow: none;
+}
+
+.card__title{
+    height: 1vw;
+
+    color: #553939;
+}
+
+#card_one{
+    background-image: url(images/niket-goswami--BnqqHaeFq4-unsplash.jpeg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: top;
+    opacity: 0.8;
+
+    text-align: left;
+}
+
+.card__title, .card__text{
+    padding: 1rem;
+
+    color: rgb(255, 255, 255);
+}
+
+#card_two{
+    background-image: url(images/efe-yagiz-soysal-PUrHke-Hlf8-unsplash.jpeg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: top;
+    opacity: 0.8;
+
+    text-align: right;
+}
+
+#card_three{
+    background-image: url(images/ratanjot-singh-UIhc7sohnvc-unsplash.jpeg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-position-y: 45%;
+    opacity: 0.8;
+
+    text-align: left;
+}
+
+#card_four{
+    background-image: url(images/kar-ming-moo-Q_3WmguWgYg-unsplash.jpeg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position-y: 20%;
+    opacity: 0.8;
+
+    text-align: left;
+}
+
+
+
+@media screen and (min-width: 44rem) {
+
+    .description__text{    
+        font-size: 1.5rem;
+    }
+
+    .card{
+        grid-column: span 6;
+    }
+
+    #card_one .card__text{
+        width: 50%;
+    }
+
+    #card_two .card__text{
+        margin-left: 60%;
+    
+        width: 40%;
+    }
+}
